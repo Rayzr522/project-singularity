@@ -1,10 +1,12 @@
 fileFormatVersion: 2
-guid: 028530e07a24f4130a1b9846dc19fbe2
+guid: 16b2068c272ba4193ab4e86fd57bb6c9
 TextureImporter:
   fileIDToRecycleName:
-    21300000: player_0
-    21300002: player_1
-    21300004: player_2
+    21300000: Player Idle
+    21300002: Player Walk 1
+    21300004: Player Walk 2
+    21300006: Screecher Flap 1
+    21300008: Screecher Flap 2
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -85,33 +87,93 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_0
+      name: Player Idle
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 104
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e692fa3aba7dc4a3889f3d970112a7a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Walk 1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 104
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fbd2b8ee79d74f8cad90f21d9069d60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Walk 2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 104
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12c393974d494ca4b7dc02fb1ef95c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Screecher Flap 1
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 86
         width: 16
-        height: 24
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ba24a02129d3454889b1ad612537fd3
+      spriteID: 647f50d70ead045728b1accf78a8a2c9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1
+      name: Screecher Flap 2
       rect:
         serializedVersion: 2
         x: 16
-        y: 0
+        y: 86
         width: 16
-        height: 24
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,27 +181,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 041edd6f1cc6b46cf8de46e863151fd3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3b8bf124ee03474a8029fc3a1d190a2
+      spriteID: c143ba816c832479c86636ee422c0692
       vertices: []
       indices: 
       edges: []
@@ -147,7 +189,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 196fd469097e347bbbe493fce71fdf59
+    spriteID: c52392ae4c5d0449b9122f0eba34223f
     vertices: []
     indices: 
     edges: []
