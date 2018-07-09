@@ -7,10 +7,11 @@ public class Shot : MonoBehaviour {
 	public float speed = 5f;
 	public float destroyDelay = 3f;
 
+	public float damageAmount = 4f;
+
 	public float direction = 1.0f;
 
 	void Start() {
-		
 		Destroy(gameObject, destroyDelay);
 	}
 	
@@ -20,4 +21,20 @@ public class Shot : MonoBehaviour {
 		position.x += speed * direction * Time.deltaTime;
 		transform.position = position;
 	}
+
+	/// <summary>
+	/// Sent when another object enters a trigger collider attached to this
+	/// object (2D physics only).
+	/// </summary>
+	/// <param name="other">The other Collider2D involved in this collision.</param>
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		Enemy enemy = other.GetComponent<Enemy>();
+		if (enemy != null) {
+			enemy.Damage(damageAmount);
+			// Make shot go poof :p
+			Destroy(gameObject);
+		}
+	}
+
 }

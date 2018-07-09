@@ -6,8 +6,14 @@ public class PlayerController : MonoBehaviour
 {
 
     // Movement variables
-    public float moveSpeed = 3.0f;
+    public float walkSpeed = 5.0f;
+    public float sprintSpeed = 8.0f;
     public float jumpVelocity = 10.0f;
+    public float fallSpeedMultiplier = 2.5f;
+    public float lowJumpMultiplier = 2f;
+
+    // Movement components
+    public ParticleSystem sprintingParticles;
 
     // Shooting logic
     public Transform shotOrigin;
@@ -32,27 +38,56 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Start()
     {
+        GameManager.instance.player = this;
+
         rb = GetComponent<Rigidbody2D>();
         floorCheck = GetComponent<EdgeCollider2D>();
         anim = GetComponent<Animator>();
+
+        sprintingParticles.Stop();
     }
 
     void Update()
     {
-
         // Quick reset code
         if (transform.position.y < -50)
         {
             transform.position = Vector3.zero;
             rb.velocity = Vector2.zero;
         }
-        
+
         // Get velocity
         Vector2 velocity = rb.velocity;
 
         // Horizontal movement
         float move = Input.GetAxis("Horizontal");
-        velocity.x = move * moveSpeed;
+        bool sprinting = Input.GetButton("Sprint");
+
+        velocity.x = move * (sprinting ? sprintSpeed : walkSpeed);
+
+
+        if (velocity.y < 0)
+        {
+            velocity += Vector2.up * Physics2D.gravity.y * (fallSpeedMultiplier - 1) * Time.deltaTime;
+        }
+        else if (velocity.y > 0 && !Input.GetButton("Jump"))
+        {
+            velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
+
+        // Sprinting
+        if (sprintingParticles.isPlaying != sprinting)
+        {
+            if (sprinting)
+            {
+                sprintingParticles.Play();
+            }
+            else
+            {
+                sprintingParticles.Stop();
+            }
+        }
+
 
         // Jumping code
         if (Input.GetButtonDown("Jump") && onGround)
@@ -66,9 +101,15 @@ public class PlayerController : MonoBehaviour
         // Change sprite direciton based on move direction
         if (Mathf.Abs(move) > 0.05)
         {
+            bool left = move < 0;
+
             Vector3 localScale = transform.localScale;
-            localScale.x = move < 0 ? -1 : 1;
+            localScale.x = left ? -1 : 1;
             transform.localScale = localScale;
+
+
+            ParticleSystem.MainModule main = sprintingParticles.main;
+            main.startRotationYMultiplier = left ? Mathf.PI : 0f;
         }
 
         // Shoot your gun
@@ -80,6 +121,5 @@ public class PlayerController : MonoBehaviour
 
         // Walking animation
         anim.SetFloat("Speed", Mathf.Abs(move));
-        Debug.Log(Mathf.Abs(move));
     }
 }
