@@ -73,14 +73,14 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if (velocity.y < 0)
-        {
-            velocity += Vector2.up * Physics2D.gravity.y * (fallSpeedMultiplier - 1) * Time.deltaTime;
-        }
-        else if (velocity.y > 0 && !Input.GetButton("Jump"))
-        {
-            velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }
+        // if (velocity.y < 0)
+        // {
+        // velocity += GameManager.instance.up * GameManager.instance.baseGravity * (fallSpeedMultiplier - 1) * Time.deltaTime;
+        // }
+        // else if (velocity.y > 0 && !Input.GetButton("Jump"))
+        // {
+        // velocity += GameManager.instance.up * GameManager.instance.baseGravity * (lowJumpMultiplier - 1) * Time.deltaTime;
+        // }
 
         // Sprinting
         if (sprintingParticles.isPlaying != sprinting)
@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
         // Jumping code
         if (Input.GetButtonDown("Jump") && onGround)
         {
-            velocity.y = jumpVelocity;
+            velocity += GameManager.instance.up * jumpVelocity;
         }
 
         // Set velocity
@@ -122,8 +122,7 @@ public class PlayerController : MonoBehaviour
         // Shoot your gun
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject shot = Instantiate(shotObject, shotOrigin.position, shotOrigin.rotation);
-            shot.GetComponent<Shot>().direction = transform.localScale.x;
+            Instantiate(shotObject, shotOrigin.position, Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z + (transform.localScale.x < 0 ? 180f : 0f)));
         }
 
         // Walking animation

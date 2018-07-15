@@ -2838,7 +2838,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 298662824}
-  moveSpeed: 50
+  moveSpeed: 1.5
+  rotationSpeed: 1.4
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
