@@ -89,6 +89,5 @@ public class Screecher : MonoBehaviour, Enemy
     void Kill()
     {
         Destroy(gameObject);
-        Debug.Log("Boom!");
     }
 }
