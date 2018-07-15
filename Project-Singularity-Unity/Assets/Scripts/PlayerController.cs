@@ -63,7 +63,14 @@ public class PlayerController : MonoBehaviour
         float move = Input.GetAxis("Horizontal");
         bool sprinting = Input.GetButton("Sprint");
 
-        velocity.x = move * (sprinting ? sprintSpeed : walkSpeed);
+        if (GameManager.instance.right.x != 0)
+        {
+            velocity.x = GameManager.instance.right.x * move * (sprinting ? sprintSpeed : walkSpeed);
+        }
+        else
+        {
+            velocity.y = GameManager.instance.right.y * move * (sprinting ? sprintSpeed : walkSpeed);
+        }
 
 
         if (velocity.y < 0)
