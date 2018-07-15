@@ -43,7 +43,6 @@ public class Screecher : MonoBehaviour, Enemy
         point.y = Screen.height - point.y;
         float width = 100;
         float height = 30;
-        Debug.Log(point);
 
         var tex = new Texture2D(1, 1, TextureFormat.ARGB32, false);
         
