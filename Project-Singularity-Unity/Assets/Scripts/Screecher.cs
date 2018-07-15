@@ -39,21 +39,7 @@ public class Screecher : MonoBehaviour, Enemy
     /// </summary>
     void OnGUI()
     {
-        Vector3 point = Camera.main.WorldToScreenPoint(transform.position + Vector3.up);
-        point.y = Screen.height - point.y;
-        float width = 100;
-        float height = 30;
-
-        var tex = new Texture2D(1, 1, TextureFormat.ARGB32, false);
-        
-        tex.SetPixel(0, 0, Color.red);
-        tex.Apply();
-        GUI.DrawTexture(new Rect(point.x - width / 2, point.y - height / 2, width, height), tex);
-
-        tex.SetPixel(0, 0, Color.green);
-        tex.Apply();
-        GUI.DrawTexture(new Rect(point.x - width / 2, point.y - height / 2, width * health / startingHealth, height), tex);
-
+        GUITools.Healthbar(health / startingHealth, transform.position);
     }
 
     void FollowPlayer()
