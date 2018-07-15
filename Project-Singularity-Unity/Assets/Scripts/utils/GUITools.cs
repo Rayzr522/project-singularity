@@ -13,7 +13,7 @@ class GUITools
 
     public static void Healthbar(float percentage, Vector3 worldPosition, float heightAbove = 1.0f, float width = 100f, float height = 30f)
     {
-        Vector3 point = Camera.main.WorldToScreenPoint(worldPosition + GameManager.instance.up.to3D() * heightAbove);
+        Vector3 point = Camera.main.WorldToScreenPoint(worldPosition + Camera.main.transform.up * heightAbove);
         point.y = Screen.height - point.y;
 
         FillRect(new Rect(point.x - width / 2, point.y - height / 2, width, height), Color.red);
