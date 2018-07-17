@@ -1,16 +1,20 @@
 fileFormatVersion: 2
-guid: 88c248062b57b41eb99d4dd0c372a86c
+guid: 7c963c8fe79d74ee796f4d25aae84615
 TextureImporter:
   fileIDToRecycleName:
-    21300000: wall-tiles_0
-    21300002: wall-tiles_1
-    21300004: wall-tiles_2
-    21300006: wall-tiles_3
-    21300008: wall-tiles_4
-    21300010: wall-tiles_5
-    21300012: wall-tiles_6
-    21300014: wall-tiles_7
-    21300016: wall-tiles_8
+    21300000: tileset_0
+    21300002: tileset_1
+    21300004: tileset_2
+    21300006: tileset_3
+    21300008: tileset_4
+    21300010: tileset_5
+    21300012: tileset_6
+    21300014: tileset_7
+    21300016: tileset_8
+    21300018: tileset_9
+    21300020: tileset_10
+    21300022: tileset_11
+    21300024: tileset_12
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -52,7 +56,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 15
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -91,13 +95,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wall-tiles_0
+      name: tileset_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 112
-        width: 16
-        height: 16
+        y: 56
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -105,19 +109,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59a86a343057849e39e541864abffa61
+      spriteID: 059eca38aa4ab46a6a731db7603d7d06
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall-tiles_1
+      name: tileset_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb9795452f17463aa7b79865a98984f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_2
       rect:
         serializedVersion: 2
         x: 16
-        y: 112
-        width: 16
-        height: 16
+        y: 56
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,19 +149,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da9e8473832da4d17bcab0cfdca6e9c7
+      spriteID: d0e4294108b7145fbbd7c33f2717e2ec
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall-tiles_2
+      name: tileset_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e58b51c51fa644f638b6cd2272d31835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_4
       rect:
         serializedVersion: 2
         x: 32
-        y: 112
-        width: 16
-        height: 16
+        y: 56
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,19 +189,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c39ba494ef0434a9789ce31221faadb0
+      spriteID: 52e77e46c6d674674bf1e1148fa66adf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall-tiles_3
+      name: tileset_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 16
-        height: 16
+        y: 48
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,19 +209,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb9744e3a1f1442b7a4cd61b0da6b958
+      spriteID: 58db0e53d6d834d0081fc4dc9d9958e4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall-tiles_4
+      name: tileset_6
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c42e2cbcbc49048a881fbf9f77bfe541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_7
       rect:
         serializedVersion: 2
         x: 16
-        y: 96
-        width: 16
-        height: 16
+        y: 48
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,19 +249,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12f6b2ce9930e4929997d82f7f83f950
+      spriteID: a5b85b95ca9b444b2afe661903bbfc0e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall-tiles_5
+      name: tileset_8
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4add1498573ba4e23a4d5cf4ee21729a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_9
       rect:
         serializedVersion: 2
         x: 32
-        y: 96
-        width: 16
-        height: 16
+        y: 48
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,19 +289,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07024b585a0c14a1a86bad08b9652842
+      spriteID: c2ec6adae0e454befa4e8c3fbd764690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall-tiles_6
+      name: tileset_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 80
-        width: 16
-        height: 16
+        y: 40
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,19 +309,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80f4d5b4cf6c14d72864f7592bc63196
+      spriteID: 8a3dc3dbfc06f405d89569ccf2a31165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall-tiles_7
+      name: tileset_11
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61dd7059cbcae4c3ea13c3724852b1a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_12
       rect:
         serializedVersion: 2
         x: 16
-        y: 80
-        width: 16
-        height: 16
+        y: 40
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,27 +349,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c5a4f0c818e04e24811408bec273e01
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall-tiles_8
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c1304225f31242f6ac7eea39dda9bc7
+      spriteID: 0a147d33fd24143eb9287d2aac3385b1
       vertices: []
       indices: 
       edges: []
@@ -273,7 +357,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9daebd40c7b17468498625b732a865f8
+    spriteID: 613a874a81d6040b69cf1739ac06b734
     vertices: []
     indices: 
     edges: []
